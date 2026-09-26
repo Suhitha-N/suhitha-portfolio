@@ -65,10 +65,12 @@ const experience = [
     year: "2026",
     company: "UptoSkills",
     role: "Data Mining & Data Analytics Intern",
-    period: "JUN — AUG 2026",
+    period: "MAY — AUG 2026",
     text:
       "Worked on data mining and analytics tasks, transforming datasets into meaningful insights and working with analytical workflows.",
-  },
+    certificate: "/certificates/uptoskills_certificate.pdf",
+
+    },
   {
     year: "2026",
     company: "Infosys Springboard",
@@ -76,7 +78,8 @@ const experience = [
     period: "JUN — AUG 2026",
     text:
       "Worked in the Python domain with practical development tasks, problem solving and application-oriented programming.",
-  },
+    certificate: "/certificates/Infosys_Springboard_Certificate.pdf",
+    },
   {
     year: "2026",
     company: "SmartBridge / ServiceNow",
@@ -84,7 +87,8 @@ const experience = [
     period: "JUL 2026",
     text:
       "Explored ServiceNow platform concepts and enterprise workflow technologies through a virtual internship experience.",
-  },
+    certificate: "/certificates/ServiceNow_Certificate.pdf",
+    },
 ];
 
 function App() {
@@ -340,6 +344,14 @@ function App() {
           >
             CONTACT
           </button>
+          <a
+          className="nav-resume"
+          href="/Suhitha_Natakam_Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          RESUME ↗
+        </a>
 
         </nav>
         <button
@@ -509,6 +521,11 @@ function App() {
                   <span>COLLEGE</span>
                   <strong>NARAYANA ENGINEERING COLLEGE</strong>
                 </div>
+                
+                <div>
+                  <span>GRADUATION</span>
+                  <strong>2027</strong>
+                </div>
 
                 <div>
                   <span>FOCUS</span>
@@ -620,8 +637,19 @@ function App() {
                 </div>
 
                 <div className="experience-arrow">
-                  ↗
-                </div>
+                {item.certificate ? (
+                  <a
+                    href={item.certificate}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${item.company} certificate`}
+                  >
+                    VIEW CERTIFICATE ↗
+                  </a>
+                ) : (
+                  "↗"
+                )}
+              </div>
 
               </div>
 

@@ -920,7 +920,7 @@ a {
     90px
     1.1fr
     1.2fr
-    40px;
+    130px;
 
   gap: 30px;
 
@@ -935,7 +935,6 @@ a {
     padding 0.4s ease,
     background 0.4s ease;
 }
-
 .experience-row:hover {
   padding-left: 20px;
   padding-right: 20px;
@@ -987,15 +986,28 @@ a {
 }
 
 .experience-arrow {
-  font-size: 20px;
-
+  font-size: 11px;
   color: #777;
+  white-space: nowrap;
+  min-width: 120px;
 
   transition:
     color 0.3s ease,
     transform 0.3s ease;
 }
 
+.experience-arrow a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.experience-arrow a:hover {
+  color: var(--accent-light);
+}
 .experience-row:hover .experience-arrow {
   color: var(--accent-light);
 
@@ -3427,5 +3439,554 @@ button, a { -webkit-tap-highlight-color: transparent; }
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+/* =========================================================
+   FINAL DESKTOP COMPACT LAYOUT
+   Keeps the existing design, animations and styling.
+   Only reduces unnecessary vertical size at 100% zoom.
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  /* -------------------------------------------------------
+     GLOBAL SECTION SPACING
+     ------------------------------------------------------- */
+
+  .section {
+    padding-top: 2.2vw !important;
+    padding-bottom: 2.2vw !important;
+  }
+
+  .section-heading {
+    margin-bottom: 2vw !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
+
+  .hero {
+    min-height: 86vh !important;
+    padding-top: 105px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .hero-content {
+    margin-top: 55px !important;
+    gap: 4vw !important;
+  }
+
+  .title-line span {
+    font-size: clamp(70px, 9.5vw, 150px) !important;
+    line-height: 0.80 !important;
+  }
+
+  .hero-side p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 22px !important;
+  }
+
+  .hero-mark {
+    margin-bottom: 20px !important;
+  }
+
+  .hero-bottom {
+    padding-top: 12px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     ABOUT
+     ------------------------------------------------------- */
+
+  .about {
+    padding-top: 2.2vw !important;
+    padding-bottom: 0 !important;
+  }
+
+  .about-grid {
+    gap: 5vw !important;
+  }
+
+  .about-statement h2 {
+    font-size: clamp(52px, 6vw, 90px) !important;
+    line-height: 0.84 !important;
+  }
+
+  .about-copy {
+    padding-top: 0 !important;
+  }
+
+  .large-copy {
+    font-size: clamp(19px, 1.7vw, 27px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 22px !important;
+  }
+
+  .about-copy > p:not(.large-copy) {
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 15px !important;
+  }
+
+  .about-meta {
+    margin-top: 25px !important;
+  }
+
+  .about-meta div {
+    padding: 11px 0 !important;
+  }
+
+  /* KEEP YOUR EXISTING THINK / BUILD ANIMATION */
+  .about .marquee {
+    margin-top: 3.5vw !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .about .marquee-track {
+    gap: 28px !important;
+  }
+
+  .about .marquee-track span {
+    font-size: clamp(35px, 4.2vw, 62px) !important;
+  }
+
+  .about .marquee-track i {
+    font-size: 15px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     EXPERIENCE
+     ------------------------------------------------------- */
+
+  .experience {
+    padding-top: 2.2vw !important;
+    padding-bottom: 2.8vw !important;
+  }
+
+  .experience-intro {
+    gap: 5vw !important;
+    margin-bottom: 2.8vw !important;
+  }
+
+  .experience-intro h2 {
+    font-size: clamp(58px, 7vw, 110px) !important;
+    line-height: 0.82 !important;
+  }
+
+  .experience-intro p {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+
+  .experience-row {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+    gap: 22px !important;
+  }
+
+  .experience-company h3 {
+    font-size: clamp(23px, 2.2vw, 34px) !important;
+  }
+
+  .experience-role h4 {
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .experience-role p {
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     WORK
+     ------------------------------------------------------- */
+
+  .work {
+    padding-top: 2.2vw !important;
+    padding-bottom: 3vw !important;
+  }
+
+  .work-header {
+    gap: 5vw !important;
+    margin-bottom: 3.5vw !important;
+  }
+
+  .work-header h2 {
+    font-size: clamp(60px, 7.2vw, 110px) !important;
+    line-height: 0.82 !important;
+  }
+
+  .work-header p {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+
+  .project-showcase {
+    gap: 4vw !important;
+  }
+
+  .project-preview {
+    height: 430px !important;
+  }
+
+  .project-item {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+    gap: 15px !important;
+  }
+
+  .project-main h3 {
+    font-size: clamp(26px, 3vw, 44px) !important;
+    margin: 8px 0 12px !important;
+  }
+
+  .project-main p {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+  }
+
+  .project-stack {
+    margin-bottom: 16px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     SKILLS
+     ------------------------------------------------------- */
+
+  .skills {
+    padding-top: 2.2vw !important;
+    padding-bottom: 2.8vw !important;
+  }
+
+  .skills-title {
+    gap: 5vw !important;
+  }
+
+  .skills-title h2 {
+    font-size: clamp(60px, 7.2vw, 110px) !important;
+    line-height: 0.82 !important;
+  }
+
+  .skills-title p {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+
+  .skills-field {
+    margin-top: 4vw !important;
+    gap: 9px 8px !important;
+  }
+
+  .skill-tag {
+    font-size: clamp(14px, 1.4vw, 20px) !important;
+    padding: 8px 14px !important;
+  }
+
+  .skill-bottom {
+    margin-top: 3.5vw !important;
+    padding-top: 14px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTACT
+     ------------------------------------------------------- */
+
+  .contact {
+    min-height: calc(100svh - 78px) !important;
+    padding-top: 3.5vw !important;
+    padding-bottom: 2vw !important;
+  }
+
+  .contact-main h2 {
+    font-size: clamp(65px, 9vw, 140px) !important;
+    line-height: 0.77 !important;
+  }
+
+  .email-link {
+    margin-top: 28px !important;
+    font-size: 12px !important;
+  }
+
+  .contact-footer {
+    padding-top: 20px !important;
+  }
+
+  .contact-orb {
+    width: 500px !important;
+    height: 500px !important;
+  }
+}
+
+
+
+/* =========================================================
+   REDUCE LARGE SECTION HEADINGS ONLY
+   Desktop only — keeps all animations and styling
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  /* EXPERIENCE */
+  .experience-intro h2 {
+    font-size: clamp(48px, 5.2vw, 82px) !important;
+    line-height: 0.85 !important;
+  }
+
+  /* THINGS I'VE BUILT / WORK */
+  .work-header h2 {
+    font-size: clamp(48px, 5.4vw, 85px) !important;
+    line-height: 0.85 !important;
+  }
+
+  /* SKILLS */
+  .skills-title h2 {
+    font-size: clamp(48px, 5.4vw, 85px) !important;
+    line-height: 0.85 !important;
+  }
+
+  /* CONTACT */
+  .contact-main h2 {
+    font-size: clamp(52px, 6.5vw, 100px) !important;
+    line-height: 0.8 !important;
+  }
+
+}
+/* =========================================================
+   FINAL SIZE REDUCTION
+   About headings + Hero name
+   Animations are preserved
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  /* =========================
+     HERO — YOUR NAME
+     ========================= */
+
+  .title-line span {
+    font-size: clamp(58px, 7.5vw, 120px) !important;
+    line-height: 0.82 !important;
+  }
+
+
+  /* =========================
+     ABOUT — CURIOUS BY NATURE
+     ========================= */
+
+  .about-statement h2 {
+    font-size: clamp(42px, 4.8vw, 72px) !important;
+    line-height: 0.86 !important;
+  }
+
+
+  /* =========================
+     ABOUT — THINK / BUILD
+     KEEP THE EXISTING MOTION
+     ========================= */
+
+  .about .marquee {
+    margin-top: 3.5vw !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .about .marquee-track {
+    gap: 24px !important;
+
+    /* IMPORTANT:
+       Do NOT change the animation */
+    animation: marquee 25s linear infinite !important;
+  }
+
+  @media (min-width: 1001px) {
+  .about .marquee-track span {
+    font-size: clamp(24px, 2.8vw, 42px) !important;
+  }
+
+  .about .marquee-track i {
+    font-size: 12px !important;
+  }
+
+  .about .marquee {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+}
+}
+/* =========================================================
+   FULL SECTION / PAGE FIT
+   Keeps heading sizes and animations unchanged
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  .section {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Keep each major section visually separated */
+  .hero,
+  .about,
+  .experience,
+  .work,
+  .skills,
+  .contact {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Prevent content from visually entering the next section */
+  .about,
+  .experience,
+  .work,
+  .skills {
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* Keep marquee animation inside About */
+  .about .marquee {
+    overflow: hidden;
+  }
+
+  .about .marquee-track {
+    width: max-content;
+  }
+}
+/* =========================================================
+   FINAL SKILLS COMPACT FIX
+   Removes the artificial empty space around skill pills
+   Desktop only — mobile remains unchanged
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  /* Remove the large empty box around the skill pills */
+  .skills-field {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 24px !important;
+    margin-bottom: 0 !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+    align-items: flex-start !important;
+  }
+
+  /* Bring the category labels directly below the pills */
+  .skill-bottom {
+    margin-top: 18px !important;
+    padding-top: 14px !important;
+  }
+
+}
+/* =========================================================
+   FINAL DESKTOP SECTION FIT
+   Each section gets its own full viewport area.
+   Keeps existing design and animations unchanged.
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  /*
+   * Navbar is approximately 86px high.
+   * Give every major page enough height to fill
+   * the remaining browser viewport.
+   */
+
+  .hero,
+  .about,
+  .experience,
+  .work,
+  .skills,
+  .contact {
+    min-height: calc(100svh - 86px) !important;
+    box-sizing: border-box !important;
+  }
+
+  /*
+   * Do NOT use height: 100vh.
+   * Some sections contain more content than one viewport.
+   * min-height lets them grow naturally instead of cutting content.
+   */
+
+  .hero,
+  .about,
+  .experience,
+  .work,
+  .skills,
+  .contact {
+    height: auto !important;
+  }
+
+  /*
+   * Navigation jumps should account for the fixed navbar.
+   */
+
+  .hero,
+  .about,
+  .experience,
+  .work,
+  .skills,
+  .contact {
+    scroll-margin-top: 86px !important;
+  }
+
+  /*
+   * Keep the animated marquee clipped only inside
+   * its own moving area.
+   */
+
+  .about .marquee {
+    overflow: hidden !important;
+  }
+
+  .about .marquee-track {
+    width: max-content !important;
+  }
+
+  /*
+   * Keep the compact Skills layout from growing again.
+   */
+
+  .skills-field {
+    min-height: 0 !important;
+  }
+
+  .skill-bottom {
+    margin-top: 18px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — LEAVE YOUR EXISTING MOBILE DESIGN ALONE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .hero,
+  .about,
+  .experience,
+  .work,
+  .skills,
+  .contact {
+    min-height: initial;
+  }
+}
+/* HERO ONLY — DESKTOP */
+@media (min-width: 1001px) {
+  .hero {
+    min-height: 100svh !important;
   }
 }
